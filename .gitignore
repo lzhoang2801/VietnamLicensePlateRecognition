@@ -219,3 +219,10 @@ __marimo__/
 licenseplates/
 sampleplates/
 motorbike/
+
+# OpenCV
+opencv/
+
+# Models
+cascade/
+positives.vec
