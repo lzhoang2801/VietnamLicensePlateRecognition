@@ -219,6 +219,8 @@ __marimo__/
 licenseplates/
 sampleplates/
 motorbike/
+handwritten-english-characters-and-digits*/
+*.csv
 
 # OpenCV
 opencv/

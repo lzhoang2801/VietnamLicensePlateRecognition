@@ -23,10 +23,10 @@ def get_haar_annotations(image_path, label_path):
             x, y = float(data[i]) * image.shape[1], float(data[i+1]) * image.shape[0]
             coords.append((x, y))
 
-        min_x = min(coords[0][0], coords[2][0]) - 1
-        min_y = min(coords[0][1], coords[2][1]) - 1
-        max_x = max(coords[1][0], coords[3][0]) + 1
-        max_y = max(coords[1][1], coords[3][1]) + 1
+        min_x = min(coords[0][0], coords[2][0]) - 2
+        min_y = min(coords[0][1], coords[2][1]) - 2
+        max_x = max(coords[1][0], coords[3][0]) + 2
+        max_y = max(coords[1][1], coords[3][1]) + 2
         width = max_x - min_x
         height = max_y - min_y
 
