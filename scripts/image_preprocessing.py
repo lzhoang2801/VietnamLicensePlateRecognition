@@ -13,3 +13,11 @@ def deskew(image, image_size: tuple[int, int]) -> np.ndarray:
     image = cv2.warpAffine(image, M, image_size, flags=cv2.WARP_INVERSE_MAP | cv2.INTER_LINEAR)
 
     return image
+
+def contrast_enhancement(image):
+    rect_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
+    
+    blackhat = cv2.morphologyEx(image, cv2.MORPH_BLACKHAT, rect_kernel)
+    tophat = cv2.morphologyEx(image, cv2.MORPH_TOPHAT, rect_kernel)
+    
+    return cv2.subtract(cv2.add(image, tophat), blackhat)

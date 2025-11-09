@@ -4,7 +4,7 @@ import random
 import glob
 
 def select_images(dataset_dir, save_dir, num_images=100):
-    image_files = glob.glob(os.path.join(dataset_dir, "*.png"))
+    image_files = glob.glob(os.path.join(dataset_dir, "carlong_*.png"))
 
     print(f"Found {len(image_files)} images in {dataset_dir}")
 
